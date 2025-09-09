@@ -1,0 +1,24 @@
+[project]
+name = "68bf76e7f1e14b22d8282052"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.13.5",
+    "biopython>=1.85",
+    "jinja2>=3.1.6",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.6",
+    "nltk>=3.9.1",
+    "numpy>=2.3.3",
+    "pandas>=2.3.2",
+    "plotly>=6.3.0",
+    "reportlab>=4.4.3",
+    "requests>=2.32.5",
+    "scikit-learn>=1.7.2",
+    "scipy>=1.16.1",
+    "seaborn>=0.13.2",
+    "spacy>=3.8.7",
+    "textblob>=0.19.0",
+    "wordcloud>=1.9.4",
+]

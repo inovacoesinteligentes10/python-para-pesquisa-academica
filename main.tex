@@ -1,0 +1,308 @@
+% Python para Pesquisa Acadêmica - Ebook Completo
+\documentclass[11pt,a4paper,oneside]{book}
+
+% =============================================================================
+% PACOTES E CONFIGURAÇÕES
+% =============================================================================
+
+% Configuração de página
+\usepackage[
+    top=3cm,
+    bottom=3cm,
+    left=3cm,
+    right=2.5cm,
+    headheight=25pt,
+    headsep=25pt,
+    footskip=25pt
+]{geometry}
+\usepackage{eso-pic}
+% Pacotes essenciais
+\usepackage[utf8]{inputenc}    % suporte a UTF-8
+\usepackage[T1]{fontenc}       % encoding da fonte
+\usepackage[portuguese]{babel} % idioma
+\usepackage{lmodern}           % fonte melhorada
+\usepackage{microtype}         % tipografia
+
+% Matemática e símbolos
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{physics}
+\usepackage{siunitx}
+
+% Tabelas e figuras
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+% Código e listagens (com suporte a UTF-8 nos acentos)
+\usepackage{listingsutf8}
+\usepackage{fancyvrb}
+
+% Caixas coloridas
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+% Cores personalizadas
+\usepackage{xcolor}
+\definecolor{pythonblue}{RGB}{52, 101, 164}
+\definecolor{pythonyellow}{RGB}{255, 212, 59}
+\definecolor{codegreen}{RGB}{34, 139, 34}
+\definecolor{codegray}{RGB}{128, 128, 128}
+\definecolor{codepurple}{RGB}{148, 0, 211}
+\definecolor{backcolour}{RGB}{248, 248, 248}
+\definecolor{sectioncolor}{RGB}{25, 50, 82}
+\definecolor{warningred}{RGB}{220, 53, 69}
+
+% Links e referências
+\usepackage[
+    colorlinks=true,
+    linkcolor=pythonblue,
+    urlcolor=pythonblue,
+    citecolor=pythonblue,
+    filecolor=pythonblue
+]{hyperref}
+
+% Cabeçalhos
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textit{Python para Pesquisa Acadêmica}}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{}
+\renewcommand{\sectionmark}[1]{}
+
+% Espaçamento
+\usepackage{setspace}
+\onehalfspacing
+
+% Letrina
+\usepackage{lettrine}
+
+% =============================================================================
+% METADADOS DO LIVRO
+% =============================================================================
+
+\newcommand{\goldenratio}{1.618}
+
+\newcommand{\authorname}{Seu Nome}
+\newcommand{\translatorname}{Editor Técnico}
+\newcommand{\booktitle}{Python para Pesquisa Acadêmica}
+\newcommand{\subtitle}{Guia Prático com Exemplos Reais}
+\newcommand{\publisher}{Editora Acadêmica}
+\newcommand{\editionyear}{2025}
+\newcommand{\isbn}{978-0-123456-78-9}
+
+% =============================================================================
+% ESTILOS PERSONALIZADOS
+% =============================================================================
+
+% Configuração de código Python
+\lstdefinestyle{pythonstyle}{
+    backgroundcolor=\color{white},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{pythonblue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    frame=none,
+    framesep=0pt,
+    xleftmargin=15pt,
+    xrightmargin=0pt,
+    aboveskip=10pt,
+    belowskip=10pt,
+    inputencoding=utf8
+}
+
+\lstset{style=pythonstyle}
+
+
+\lstset{
+  style=pythonstyle,
+  inputencoding=utf8,
+  extendedchars=true,
+  literate=
+    {á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {â}{{\^a}}1
+    {Á}{{\'A}}1 {À}{{\`A}}1 {Ã}{{\~A}}1 {Â}{{\^A}}1
+    {é}{{\'e}}1 {ê}{{\^e}}1
+    {É}{{\'E}}1 {Ê}{{\^E}}1
+    {í}{{\'i}}1
+    {Í}{{\'I}}1
+    {ó}{{\'o}}1 {õ}{{\~o}}1 {ô}{{\^o}}1
+    {Ó}{{\'O}}1 {Õ}{{\~O}}1 {Ô}{{\^O}}1
+    {ú}{{\'u}}1
+    {Ú}{{\'U}}1
+    {ç}{{\c{c}}}1
+    {Ç}{{\c{C}}}1
+}
+
+% Caixas personalizadas
+\newtcolorbox{pythonbox}[1][]{
+    colback=white,
+    colframe=white,
+    boxrule=0pt,
+    sharp corners,
+    #1
+}
+
+\newtcolorbox{examplebox}[1][]{
+    colback=white,
+    colframe=white,
+    boxrule=0pt,
+    sharp corners,
+    fonttitle=\bfseries,
+    title=Exemplo Prático,
+    #1
+}
+
+\newtcolorbox{researchbox}[1][]{
+    colback=white,
+    colframe=white,
+    boxrule=0pt,
+    sharp corners,
+    fonttitle=\bfseries,
+    title=Aplicação em Pesquisa,
+    #1
+}
+
+\newtcolorbox{warningbox}[1][]{
+    colback=white,
+    colframe=white,
+    boxrule=0pt,
+    sharp corners,
+    fonttitle=\bfseries,
+    title=Atenção,
+    #1
+}
+
+% Títulos de capítulos e seções
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\color{sectioncolor}}
+{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries\color{sectioncolor}}
+{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries\color{sectioncolor}}
+{\thesubsection}{1em}{}
+
+% =============================================================================
+% INFORMAÇÕES DO DOCUMENTO
+% =============================================================================
+% Adiciona imagem de fundo apenas na primeira página
+% \AddToShipoutPictureBG*{%
+%   \includegraphics[width=\paperwidth,height=\paperheight]{frontmatter/ChatGPT.png}
+% }
+\title{
+    \vspace{-2cm}
+    {\Huge\bfseries\color{sectioncolor} Python para}\\[0.5cm]
+    {\Huge\bfseries\color{sectioncolor} Pesquisa Acadêmica}\\[1cm]
+    {\Large\bfseries\color{sectioncolor} Guia Prático com Exemplos Reais}
+}
+
+\author{
+    \Large Seu Nome\\[0.3cm]
+    \normalsize Universidade/Instituição\\[0.5cm]
+    \normalsize Versão 1.0 - 2025
+}
+
+\date{}
+
+% =============================================================================
+% DOCUMENTO
+% =============================================================================
+
+\begin{document}
+% Página dedicada apenas para a imagem de fundo
+\newpage
+\thispagestyle{empty}
+\AddToShipoutPictureBG*{%
+  \includegraphics[width=\paperwidth,height=\paperheight]{frontmatter/ChatGPT.png}
+}
+\mbox{}  % Página vazia com apenas a imagem
+\newpage
+
+\frontmatter
+
+% Página de título
+\maketitle
+\thispagestyle{empty}
+
+% Página de copyright
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+\small
+\textbf{\booktitle}\\
+\subtitle\\[1cm]
+
+\textcopyright\
+\editionyear\ \authorname\\
+\publisher\\[0.5cm]
+
+ISBN: \isbn\\[1cm]
+
+Este documento foi compilado com pdfLaTeX\\
+Versão: \editionyear\\[0.5cm]
+
+Todos os direitos reservados. Nenhuma parte desta publicação pode ser\\
+reproduzida, distribuída ou transmitida de qualquer forma ou por qualquer meio,\\
+incluindo fotocópia, gravação ou outros métodos eletrônicos ou mecânicos,\\
+sem a permissão prévia por escrito do editor.
+\end{center}
+\vspace*{\fill}
+
+% Prefácio
+\chapter*{Prefácio}
+\addcontentsline{toc}{chapter}{Prefácio}
+
+Este livro nasceu da necessidade de democratizar o uso do Python na pesquisa acadêmica. Durante anos, observei pesquisadores lutando com ferramentas inadequadas ou gastando tempo excessivo em tarefas que poderiam ser automatizadas. Python oferece uma solução elegante, mas a curva de aprendizado pode ser intimidadora sem orientação adequada.
+
+O objetivo desta obra é servir como ponte entre o conhecimento teórico e a aplicação prática. Cada capítulo foi cuidadosamente estruturado para apresentar conceitos fundamentais seguidos de exemplos reais de diferentes áreas acadêmicas. Não se trata apenas de ensinar Python, mas de mostrar como pensar computacionalmente sobre problemas de pesquisa.
+
+Agradeço aos colegas pesquisadores que compartilharam seus casos de uso, aos estudantes que testaram os exemplos, e à comunidade Python que continua construindo ferramentas extraordinárias para a ciência.
+
+\vspace{1cm}
+\begin{flushright}
+\authorname\\
+\editionyear
+\end{flushright}
+
+% Sumário
+\tableofcontents
+
+% ===== CONTEÚDO PRINCIPAL =====
+\mainmatter
+\pagestyle{fancy}
+
+\input{chapter/chapter1}
+\input{chapter/chapter2}
+\input{chapter/chapter3}
+\input{chapter/chapter4}
+\input{chapter/chapter5}
+\input{chapter/chapter6}
+\input{chapter/chapter7}
+\input{chapter/chapter8}
+\input{chapter/chapter9}
+\input{chapter/chapter10}
+\input{chapter/chapter11}
+
+\end{document}

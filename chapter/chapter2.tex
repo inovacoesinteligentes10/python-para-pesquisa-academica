@@ -1,0 +1,296 @@
+
+% =============================================================================
+% CAPÍTULO 2: FUNDAMENTOS DO PYTHON PARA PESQUISADORES
+% =============================================================================
+
+\chapter{Fundamentos do Python para Pesquisadores}
+
+Antes de mergulharmos em aplicações específicas, é fundamental estabelecer uma base sólida nos conceitos do Python que são essenciais para pesquisa acadêmica. Este capítulo não é uma introdução tradicional à programação, mas sim um guia focado nas necessidades específicas de pesquisadores que precisam processar dados, automatizar análises e garantir reproducibilidade.
+
+\section{Configurando seu Ambiente de Pesquisa}
+
+O primeiro passo para usar Python efetivamente em pesquisa é configurar um ambiente apropriado. Diferentemente do desenvolvimento de software comercial, a pesquisa acadêmica tem necessidades específicas: reproducibilidade, documentação integrada e capacidade de compartilhamento.
+
+\subsection{Anaconda: A Distribuição Científica}
+
+Anaconda é a distribuição Python padrão para ciência de dados. Ela inclui Python, centenas de bibliotecas científicas e ferramentas de gerenciamento de ambiente que são cruciais para pesquisa reproducível.
+
+\begin{examplebox}
+\textbf{Instalação e Configuração Básica:}
+
+\begin{lstlisting}[language=bash,breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}]
+# Baixar Anaconda em https://www.anaconda.com/
+# Após instalação, criar ambiente para projeto específico
+conda create -n minha_pesquisa python=3.9
+conda activate minha_pesquisa
+
+# Instalar bibliotecas essenciais
+conda install numpy pandas matplotlib scipy scikit-learn jupyter
+
+# Listar ambientes
+conda env list
+
+# Exportar ambiente para reproducibilidade
+conda env export > environment.yml
+\end{lstlisting}
+\end{examplebox}
+
+\subsection{Jupyter Notebooks: Pesquisa Interativa}
+
+Jupyter Notebooks revolucionaram a pesquisa computacional ao permitir combinar código, resultados, visualizações e narrativa em um único documento. Isso é fundamental para a ciência aberta e reproducível.
+
+\begin{researchbox}
+\textbf{Estrutura de um Notebook de Pesquisa:}
+
+Um notebook bem estruturado deve conter:
+\begin{enumerate}
+    \item \textbf{Introdução}: Contexto e objetivos da análise
+    \item \textbf{Importações}: Todas as bibliotecas necessárias
+    \item \textbf{Carregamento de dados}: Com verificações de integridade
+    \item \textbf{Análise exploratória}: Entendimento inicial dos dados
+    \item \textbf{Processamento}: Limpeza e transformação
+    \item \textbf{Análise principal}: Métodos estatísticos/algoritmos
+    \item \textbf{Visualização}: Gráficos interpretativos
+    \item \textbf{Conclusões}: Interpretação dos resultados
+\end{enumerate}
+\end{researchbox}
+
+\section{Tipos de Dados Essenciais para Pesquisa}
+
+Python oferece estruturas de dados flexíveis que se adaptam perfeitamente às necessidades de pesquisa. Compreender quando e como usar cada tipo é crucial para escrever código eficiente e legível.
+
+\subsection{Listas: Coletas Ordenadas}
+
+\begin{examplebox}
+\textbf{Exemplo: Análise de Dados Experimentais}
+
+\begin{lstlisting}[language=Python,breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}]
+# Dados de tempo de reação em experimento psicológico
+tempos_reacao = [0.45, 0.52, 0.38, 0.61, 0.49, 0.55, 0.42]
+condicoes = ["controle", "tratamento_a", "controle", 
+            "tratamento_b", "controle", "tratamento_a", "tratamento_b"]
+
+# Operações básicas
+print(f"Número de observações: {len(tempos_reacao)}")
+print(f"Tempo médio: {sum(tempos_reacao)/len(tempos_reacao):.3f}s")
+print(f"Tempo mínimo: {min(tempos_reacao):.3f}s")
+print(f"Tempo máximo: {max(tempos_reacao):.3f}s")
+
+# Filtrar dados por condição
+tempos_controle = [t for t, c in zip(tempos_reacao, condicoes) 
+                   if c == "controle"]
+print(f"Tempos no grupo controle: {tempos_controle}")
+\end{lstlisting}
+\end{examplebox}
+
+\subsection{Dicionários: Dados Estruturados}
+
+\begin{examplebox}
+\textbf{Exemplo: Base de Dados de Participantes}
+
+\begin{lstlisting}[language=Python,breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}]
+# Representação de dados de participantes
+participantes = [
+    {"id": "P001", "idade": 25, "genero": "F", "grupo": "experimental",
+     "pre_teste": 78, "pos_teste": 85, "data_coleta": "2024-03-15"},
+    {"id": "P002", "idade": 31, "genero": "M", "grupo": "controle",
+     "pre_teste": 72, "pos_teste": 74, "data_coleta": "2024-03-16"}
+]
+
+# Calcular melhoria média por grupo
+def calcular_melhoria_grupo(dados, grupo_alvo):
+    melhorias = []
+    for p in dados:
+        if p["grupo"] == grupo_alvo:
+            melhorias.append(p["pos_teste"] - p["pre_teste"])
+    return sum(melhorias)/len(melhorias) if melhorias else 0
+
+melhoria_exp = calcular_melhoria_grupo(participantes, "experimental")
+melhoria_ctrl = calcular_melhoria_grupo(participantes, "controle")
+
+print(f"Melhoria grupo experimental: {melhoria_exp:.1f} pontos")
+print(f"Melhoria grupo controle: {melhoria_ctrl:.1f} pontos")
+\end{lstlisting}
+\end{examplebox}
+
+\section{Funções: Modularizando sua Pesquisa}
+
+\begin{examplebox}
+\textbf{Exemplo: Função para Análise Estatística}
+
+\begin{lstlisting}[language=Python,breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}]
+import math
+
+def teste_t_pareado(antes, depois, alpha=0.05):
+    """
+    Realiza teste t pareado para amostras dependentes.
+    Retorna dict com t, p-valor e conclusão.
+    """
+    if len(antes) != len(depois):
+        raise ValueError("Listas devem ter mesmo tamanho")
+    if len(antes) < 3:
+        raise ValueError("Tamanho amostral muito pequeno (n < 3)")
+
+    diferencas = [d - a for a, d in zip(antes, depois)]
+    n = len(diferencas)
+    media_diff = sum(diferencas)/n
+    var_diff = sum((d - media_diff)**2 for d in diferencas)/(n-1)
+    erro_padrao = math.sqrt(var_diff/n)
+    t_stat = media_diff/erro_padrao
+    t_critico = 2.262 if n-1 <= 9 else 1.96
+    p_valor = 0.05 if abs(t_stat) > t_critico else 0.10
+    conclusao = "Diferença significativa" if p_valor<alpha else "Diferença não significativa"
+    return {"t_statistic": t_stat, "p_valor": p_valor, "conclusao": conclusao}
+
+dados_pre = [72, 68, 75, 71, 69, 74, 70]
+dados_pos = [78, 72, 80, 76, 74, 79, 75]
+resultado = teste_t_pareado(dados_pre, dados_pos)
+print(f"t: {resultado['t_statistic']:.3f}, p: {resultado['p_valor']:.3f}, {resultado['conclusao']}")
+\end{lstlisting}
+\end{examplebox}
+
+\section{Trabalhando com Arquivos e Dados}
+
+\subsection{Lendo Dados CSV}
+
+\begin{examplebox}
+\textbf{Exemplo: Processamento de Dados de Survey}
+
+\begin{lstlisting}[language=Python,breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}]
+import csv
+from collections import defaultdict
+
+def analisar_survey(arquivo_csv):
+    dados = []
+    with open(arquivo_csv,'r',encoding='utf-8') as f:
+        leitor = csv.DictReader(f)
+        for linha in leitor:
+            linha['idade'] = int(linha['idade'])
+            linha['satisfacao'] = float(linha['satisfacao'])
+            dados.append(linha)
+    stats_departamento = defaultdict(list)
+    for pessoa in dados:
+        dept = pessoa['departamento']
+        stats_departamento[dept].append({'idade':pessoa['idade'],'satisfacao':pessoa['satisfacao']})
+    resultados = {}
+    for dept,pessoas in stats_departamento.items():
+        idades = [p['idade'] for p in pessoas]
+        satisfacoes = [p['satisfacao'] for p in pessoas]
+        resultados[dept] = {'n':len(pessoas),
+                            'idade_media':sum(idades)/len(idades),
+                            'satisfacao_media':sum(satisfacoes)/len(satisfacoes),
+                            'idade_min':min(idades),'idade_max':max(idades)}
+    return resultados
+
+# Criar arquivo exemplo
+dados_exemplo = ["id,idade,satisfacao,departamento",
+                 "1,25,7.5,TI",
+                 "2,32,8.2,RH",
+                 "3,28,6.8,TI",
+                 "4,45,9.1,Financeiro",
+                 "5,31,7.9,RH"]
+with open('survey_exemplo.csv','w') as f: f.write('\n'.join(dados_exemplo))
+
+resultados = analisar_survey('survey_exemplo.csv')
+for dept, stats in resultados.items():
+    print(f"\n{dept}: N={stats['n']}, Idade média={stats['idade_media']:.1f}, Satisfação média={stats['satisfacao_media']:.1f}")
+\end{lstlisting}
+\end{examplebox}
+
+\section{Tratamento de Erros e Boas Práticas}
+
+\begin{examplebox}
+\textbf{Exemplo: Limpeza Robusta de Dados}
+
+\begin{lstlisting}[language=Python,breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}]
+def limpar_dados_numericos(dados, nome_coluna, valor_min=None, valor_max=None):
+    dados_limpos = []
+    problemas = []
+    for i, registro in enumerate(dados):
+        try:
+            valor = float(registro[nome_coluna])
+            if valor_min is not None and valor<valor_min:
+                problemas.append(f"Linha {i+1}: {valor} abaixo do mínimo {valor_min}")
+                continue
+            if valor_max is not None and valor>valor_max:
+                problemas.append(f"Linha {i+1}: {valor} acima do máximo {valor_max}")
+                continue
+            registro_limpo = registro.copy()
+            registro_limpo[nome_coluna] = valor
+            dados_limpos.append(registro_limpo)
+        except ValueError:
+            problemas.append(f"Linha {i+1}: valor '{registro[nome_coluna]}' não é numérico")
+        except KeyError:
+            problemas.append(f"Linha {i+1}: coluna '{nome_coluna}' não encontrada")
+    relatorio = {'total_original':len(dados),'total_limpo':len(dados_limpos),
+                 'removidos':len(dados)-len(dados_limpos),'problemas':problemas}
+    return dados_limpos, relatorio
+
+# Exemplo
+dados_raw = [{'id':'1','score':'85'},
+             {'id':'2','score':'92'},
+             {'id':'3','score':'NA'},
+             {'id':'4','score':'150'},
+             {'id':'5','score':'78'},
+             {'id':'6','score':'-5'}]
+dados_limpos, relatorio = limpar_dados_numericos(dados_raw,'score',0,100)
+print(relatorio)
+\end{lstlisting}
+\end{examplebox}
+
+\section{Documentação e Comentários}
+
+\begin{warningbox}
+\textbf{Princípios de Documentação para Pesquisadores:}
+\begin{enumerate}
+    \item Explique o “porquê”, não apenas o “como”
+    \item Documente suposições e parâmetros
+    \item Cite fontes e referências
+    \item Registre limitações do código
+\end{enumerate}
+\end{warningbox}
+
+\begin{examplebox}
+\textbf{Exemplo: Documentação Científica Apropriada}
+
+\begin{lstlisting}[language=Python,breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}]
+def calcular_cohen_d(grupo1, grupo2):
+    """
+    Calcula Cohen's d (tamanho do efeito) entre dois grupos.
+    Retorna valor float.
+    """
+    import math
+    media1 = sum(grupo1)/len(grupo1)
+    media2 = sum(grupo2)/len(grupo2)
+    var1 = sum((x-media1)**2 for x in grupo1)/(len(grupo1)-1)
+    var2 = sum((x-media2)**2 for x in grupo2)/(len(grupo2)-1)
+    n1,n2 = len(grupo1),len(grupo2)
+    dp_pooled = math.sqrt(((n1-1)*var1 + (n2-1)*var2)/(n1+n2-2))
+    return (media1-media2)/dp_pooled
+
+experimental = [78,82,85,79,88,84,81]
+controle = [72,75,71,74,73,76,70]
+d = calcular_cohen_d(experimental,controle)
+print(f"Cohen's d={d:.3f}")
+\end{lstlisting}
+\end{examplebox}
+
+\section{Exercícios Práticos}
+
+\begin{examplebox}
+\textbf{Exercício 1: Estatísticas Descritivas}  
+Crie função que calcule média, mediana, desvio padrão e quartis para uma lista, tratando valores ausentes.
+
+\textbf{Exercício 2: Leitor de Dados Robusto}  
+Escreva função que leia CSV e detecte tipo de cada coluna (numérico, categórico, data).
+
+\textbf{Exercício 3: Validador de Dados Experimentais}  
+Implemente função que valide dados verificando duplicatas, outliers e padrões suspeitos.
+\end{examplebox}
+
+
+Este capítulo estabeleceu as bases fundamentais do Python para pesquisa. No próximo capítulo, exploraremos como trabalhar efetivamente com as principais bibliotecas científicas (NumPy, pandas, Matplotlib) que são essenciais para análise de dados em pesquisa acadêmica.
+
+% =============================================================================
+% CAPÍTULO 3: BIBLIOTECAS CIENTÍFICAS ESSENCIAIS
+% =============================================================================

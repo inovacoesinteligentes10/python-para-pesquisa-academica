@@ -1,4 +1,6 @@
 # Auto-correção aplicada
+import matplotlib.pyplot as plt
+
 def example_function():
     """Código do exemplo"""
     pass
@@ -36,7 +38,8 @@ def example_function():
     #         plt.xticks(range(len(results_df)), results_df['algorithm'], rotation=45)
     #         plt.grid(True, alpha=0.3)
     #         plt.tight_layout()
-    #         plt.show()
+    #         plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa
     # toolkit = ClassificationToolkit()
     # X_train = pd.DataFrame(np.random.randn(1000, 5),
     #                         columns=['feature1', 'feature2', 'feature3', 'feature4', 'feature5'])
@@ -50,5 +53,5 @@ def example_function():
     # print(tuning_results['best_params'])
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

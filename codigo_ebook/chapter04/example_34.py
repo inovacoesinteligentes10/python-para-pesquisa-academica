@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 1303
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+from scipy import stats
+
 
 # Simular exemplo com multiplas comparacoes
 np.random.seed(123)

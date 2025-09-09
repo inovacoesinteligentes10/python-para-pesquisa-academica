@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 1222
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+
 
 def aplicar_correcoes(p_valores, metodos):
     """Aplica diferentes metodos de correcao"""

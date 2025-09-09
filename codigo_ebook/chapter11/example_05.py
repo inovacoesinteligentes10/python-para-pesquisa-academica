@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 181
 
 Este código foi extraído automaticamente do arquivo chapter11.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 def gerar_graficos(self, salvar=True):
         """Gera gráficos para o relatório"""

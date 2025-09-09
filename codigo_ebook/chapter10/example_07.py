@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 230
 
 Este código foi extraído automaticamente do arquivo chapter10.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # Criando dados temporais para demonstrar animações
 datas = pd.date_range(start='2020-01-01', end='2023-12-31', freq='M')

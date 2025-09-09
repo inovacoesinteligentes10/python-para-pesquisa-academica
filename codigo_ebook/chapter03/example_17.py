@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 532
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # Criar dataset multivariado simulado
 np.random.seed(123)

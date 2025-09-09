@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 689
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 def pipeline_limpeza_analise(dados_brutos):
     # 2. LIMPEZA DE DADOS

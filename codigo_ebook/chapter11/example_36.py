@@ -1,4 +1,6 @@
 # Auto-correção aplicada
+import matplotlib.pyplot as plt
+
 def example_function():
     """Código do exemplo"""
     pass
@@ -21,10 +23,11 @@ def example_function():
     #             ax.spines['right'].set_visible(False)
     #             plt.tight_layout()
     #             plt.savefig('figura5_violin_anotado.png', dpi=300, bbox_inches='tight')
-    #             plt.show()
+    #             plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa
     #         result = fig
     #         grafico_anotado = criar_grafico_com_anotacoes(dados_estudo)
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

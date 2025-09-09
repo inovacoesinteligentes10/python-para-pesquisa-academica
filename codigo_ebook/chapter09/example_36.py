@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 684
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+
 
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 

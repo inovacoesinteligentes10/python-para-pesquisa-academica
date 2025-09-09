@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 458
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+from scipy import stats
+
 
 import statsmodels.api as sm
 from statsmodels.stats.diagnostic import het_breuschpagan, het_white

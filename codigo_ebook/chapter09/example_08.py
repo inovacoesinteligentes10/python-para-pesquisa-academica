@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 132
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Criando visualizações exploratórias
 fig, axes = plt.subplots(2, 2, figsize=(15, 10))

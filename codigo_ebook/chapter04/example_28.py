@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 1070
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import matplotlib.pyplot as plt
+
 
 def pca_visualizacoes(dados, pca, dados_pca, loadings_df, var_explicada, var_cumulativa, n_componentes):
     """Cria visualizacoes do PCA"""

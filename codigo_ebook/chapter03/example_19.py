@@ -6,6 +6,10 @@ Linha original no arquivo LaTeX: 604
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 # 4. Histograma de distribuições
 ax4 = plt.subplot(2, 3, 4)
@@ -28,4 +32,5 @@ plt.title('Educação vs Renda')
 
 plt.tight_layout()
 plt.savefig('analise_multivariada.png', dpi=300, bbox_inches='tight')
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

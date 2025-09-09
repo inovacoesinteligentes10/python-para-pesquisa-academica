@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 1251
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 def visualizar_correcoes(p_valores, resultados, metodos):
     """Cria visualizacoes das correcoes"""
@@ -49,6 +52,7 @@ def visualizar_correcoes(p_valores, resultados, metodos):
     ax2.grid(True, alpha=0.3)
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa
 
     return resultados

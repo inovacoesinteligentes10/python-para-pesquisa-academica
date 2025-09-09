@@ -6,6 +6,11 @@ Linha original no arquivo LaTeX: 566
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 # Criar visualização complexa
 fig = plt.figure(figsize=(16, 12))

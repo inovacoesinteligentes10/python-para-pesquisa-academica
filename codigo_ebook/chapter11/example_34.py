@@ -1,4 +1,6 @@
 # Auto-correção aplicada
+import matplotlib.pyplot as plt
+
 def example_function():
     """Código do exemplo"""
     pass
@@ -43,5 +45,5 @@ def example_function():
     #         figura_multipla = criar_figura_multipla(dados_estudo, 'figura4_analise_completa.png')
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

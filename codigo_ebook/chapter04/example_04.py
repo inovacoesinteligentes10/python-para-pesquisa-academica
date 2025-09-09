@@ -6,6 +6,10 @@ Linha original no arquivo LaTeX: 132
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+
 
 def diagnosticos_visuais(dados, grupo_col, variavel_dependente):
     """Cria diagnosticos visuais"""

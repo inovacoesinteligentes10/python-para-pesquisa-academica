@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 72
 
 Este código foi extraído automaticamente do arquivo chapter10.tex
 """
+import numpy as np
+
 
 # Gráfico de dispersão interativo
 fig_scatter = px.scatter(

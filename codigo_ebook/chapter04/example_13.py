@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 492
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+from scipy import stats
+
 
 def diagnosticos_residuos(modelo, X_const):
     """Executa diagnosticos completos dos residuos"""

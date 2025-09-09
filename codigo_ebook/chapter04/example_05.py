@@ -6,6 +6,10 @@ Linha original no arquivo LaTeX: 168
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
 
 def detectar_outliers(dados, variavel_dependente, axes):
     """Detecta e visualiza outliers"""
@@ -27,7 +31,8 @@ def detectar_outliers(dados, variavel_dependente, axes):
     axes[1,1].set_ylabel(variavel_dependente)
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig("temp_plot.png", bbox_inches="tight")
+    plt.close()  # plt.show() substituído para execução não-interativa
 
     print(f"   Outliers detectados: {len(outliers)}")
     if len(outliers) > 0:

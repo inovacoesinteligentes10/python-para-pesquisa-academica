@@ -1,4 +1,6 @@
 # Auto-correção aplicada
+import pandas as pd
+
 def example_function():
     """Código do exemplo"""
     pass
@@ -48,5 +50,5 @@ def example_function():
     #         param_grid = param_grids[algorithm]
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

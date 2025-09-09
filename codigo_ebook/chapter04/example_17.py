@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 653
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+
 
 from sklearn.utils import resample
 

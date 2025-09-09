@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 925
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+
 
 # Exemplo de uso
 np.random.seed(42)

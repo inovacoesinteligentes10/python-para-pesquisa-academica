@@ -6,6 +6,10 @@ Linha original no arquivo LaTeX: 530
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+
 
 def visualizacoes_diagnosticas(residuos, valores_preditos, residuos_estudentizados, dados, preditores):
     """Cria visualizacoes diagnosticas"""
@@ -43,4 +47,5 @@ def visualizacoes_diagnosticas(residuos, valores_preditos, residuos_estudentizad
             axes[1,i].set_title(f'Residuos vs {pred}')
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

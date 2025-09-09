@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 430
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 # 1. Gráfico de barras com barras de erro
 x_pos = np.arange(len(grupos))

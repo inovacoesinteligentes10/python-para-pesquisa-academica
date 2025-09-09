@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 1276
 
 Este código foi extraído automaticamente do arquivo chapter11.tex
 """
+import matplotlib.pyplot as plt
+
 
 def criar_grafico_com_anotacoes(dados):
     """Cria gráfico com anotações estatísticas para publicação"""

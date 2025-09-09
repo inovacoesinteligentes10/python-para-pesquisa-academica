@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 68
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # Simulando dados de um estudo sobre produtividade acadêmica
 np.random.seed(123)

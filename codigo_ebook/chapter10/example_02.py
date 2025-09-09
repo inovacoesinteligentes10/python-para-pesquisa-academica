@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 28
 
 Este código foi extraído automaticamente do arquivo chapter10.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # Configuração para exibição em notebooks
 pyo.init_notebook_mode(connected=True)

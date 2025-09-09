@@ -32,12 +32,12 @@ def example_function():
     #             f.write(doc_completa)
     #         print(f"Documentação gerada em: {output_dir}/")
     #             return output_dir
-    # doc = GeradorDocumentacao("Análise de Eficácia Educacional", ""1.0.0"")
+    # doc = GeradorDocumentacao("Análise de Eficácia Educacional", """1.0.0""")
     # doc.adicionar_secao("Dataset Principal", doc.documentar_dataset(dados_estudo))
     # doc.adicionar_secao("Funções de Análise", doc.documentar_funcao(GeradorRelatorio.calcular_estatisticas_descritivas))
     # doc.gerar_documentacao_completa()
     # """
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

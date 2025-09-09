@@ -6,6 +6,10 @@ Linha original no arquivo LaTeX: 886
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+
 
 def permutacao_visualizacao(stat_observada, stats_permutacao):
     """Cria visualizacao do teste de permutacao"""
@@ -37,4 +41,5 @@ def permutacao_visualizacao(stat_observada, stats_permutacao):
     plt.title('Teste de Permutacao: Distribuicao Nula')
     plt.legend()
     plt.grid(True, alpha=0.3)
-    plt.show()
+    plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

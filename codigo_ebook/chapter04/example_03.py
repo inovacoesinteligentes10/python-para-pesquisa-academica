@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 100
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+from scipy import stats
+
 
 def testar_homogeneidade(dados, grupo_col, variavel_dependente):
     """Testa homogeneidade de variancias"""

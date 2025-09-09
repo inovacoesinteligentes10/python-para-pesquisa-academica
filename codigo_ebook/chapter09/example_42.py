@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 833
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+
 
 # Aplicando análise espectral
 periodos, magnitude = analise_espectral(df_academico['publicacoes'].values)

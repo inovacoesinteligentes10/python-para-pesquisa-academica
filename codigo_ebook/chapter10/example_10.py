@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 331
 
 Este código foi extraído automaticamente do arquivo chapter10.tex
 """
+import pandas as pd
+
 
 # app_pesquisa.py - Aplicação Streamlit para Análise de Dados de Pesquisa
 

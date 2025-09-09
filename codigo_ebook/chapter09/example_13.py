@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 234
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Sazonalidade
 axes[2].plot(df_academico.index, decomposicao.seasonal,
@@ -23,4 +25,5 @@ axes[3].set_xlabel('Data')
 axes[3].grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 601
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Análise de sazonalidade por diferentes períodos
 fig, axes = plt.subplots(2, 2, figsize=(15, 10))

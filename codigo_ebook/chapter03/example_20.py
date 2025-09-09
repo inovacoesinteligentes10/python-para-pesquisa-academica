@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 633
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 # Relatório estatístico
 print("RELATÓRIO DE ANÁLISE MULTIVARIADA")

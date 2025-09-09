@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 84
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+
 
 # Simulando impacto da pandemia (2020-2021)
 pandemia_inicio = ((datas_pub >= '2020-03-01') &

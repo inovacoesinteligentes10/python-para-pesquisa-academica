@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 503
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Visualizando previsões
 plt.figure(figsize=(15, 8))

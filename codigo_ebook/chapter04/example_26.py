@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 1007
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import pandas as pd
+
 
 def pca_selecao_componentes(dados, dados_scaled, var_explicada, var_cumulativa, n_componentes=None):
     """Seleciona numero ideal de componentes e executa PCA final"""

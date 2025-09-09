@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 424
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+
 
 from itertools import product
 

@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 744
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+
 
 # Exemplos de uso do bootstrap
 np.random.seed(123)

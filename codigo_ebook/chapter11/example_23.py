@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 840
 
 Este código foi extraído automaticamente do arquivo chapter11.tex
 """
+import numpy as np
+
 
 # Slide com resultados estatísticos
 def criar_slide_estatisticas(dados):

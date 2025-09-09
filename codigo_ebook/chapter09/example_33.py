@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 618
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import seaborn as sns
+
 
 # Padrão trimestral
 quarterly_pattern = df_academico.groupby('trimestre')['publicacoes'].agg(['mean', 'std'])

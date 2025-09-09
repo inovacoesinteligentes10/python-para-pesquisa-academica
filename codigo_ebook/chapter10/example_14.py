@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 479
 
 Este código foi extraído automaticamente do arquivo chapter10.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # dashboard_pesquisa.py - Dashboard completo com Dash
 

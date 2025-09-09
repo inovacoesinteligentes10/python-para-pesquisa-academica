@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 323
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+
 
 def calcular_tamanhos_efeito(grupo1, grupo2, t_stat):
     """Calcula diferentes tamanhos de efeito"""

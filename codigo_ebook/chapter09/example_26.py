@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 484
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+
 
 # Fazendo previsões
 previsoes = modelo_ajustado.forecast(steps=len(teste))

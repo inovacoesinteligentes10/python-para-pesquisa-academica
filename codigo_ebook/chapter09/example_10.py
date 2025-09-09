@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 170
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Tendência anual
 publicacoes_por_ano = df_academico.groupby('ano')['publicacoes'].sum()
@@ -27,4 +29,5 @@ axes[1, 1].set_ylabel('Frequência')
 axes[1, 1].grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

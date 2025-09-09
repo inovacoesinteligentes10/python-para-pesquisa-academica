@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 747
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import matplotlib.pyplot as plt
+
 
 def pipeline_visualizacoes_1_2(dados_limpos, controle, experimental):
     # 4. VISUALIZACAO

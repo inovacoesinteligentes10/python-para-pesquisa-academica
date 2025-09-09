@@ -10,6 +10,11 @@ Este código foi extraído automaticamente do arquivo chapter1.tex
 import networkx as nx
 import pandas as pd
 from textblob import TextBlob
+import re
+
+def extract_mentions(text):
+    """Extrai menções (@usuario) de um texto"""
+    return re.findall(r'@(\w+)', text)
 
 # Carregar dados de tweets
 tweets_df = pd.read_csv('political_tweets.csv')

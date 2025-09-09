@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 651
 
 Este código foi extraído automaticamente do arquivo chapter11.tex
 """
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 # Configuração para apresentações
 plt.rcParams['figure.figsize'] = (12, 8)

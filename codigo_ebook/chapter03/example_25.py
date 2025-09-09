@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 775
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 def pipeline_visualizacoes_3_4(dados_limpos, ax3, ax4):
     # Gráfico 3: Pré vs Pós por grupo
@@ -46,4 +49,5 @@ def pipeline_visualizacoes_3_4(dados_limpos, ax3, ax4):
 
     plt.tight_layout()
     plt.savefig('pipeline_completo.png', dpi=300, bbox_inches='tight')
-    plt.show()
+    plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

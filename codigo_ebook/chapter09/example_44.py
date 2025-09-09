@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 868
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+
 
 # Análise por semestre acadêmico (assumindo início em março e setembro)
 df_academico['semestre'] = np.where(df_academico.index.month.isin([3,4,5,6,7,8]), 1, 2)

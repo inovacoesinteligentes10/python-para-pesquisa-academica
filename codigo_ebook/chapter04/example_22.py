@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 853
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+
 
 def permutacao_distribuicao_nula(stat_observada, dados_combinados, n1, n2, estatistica_func, n_perm=10000):
     """Gera distribuicao nula e calcula p-valor"""

@@ -32,5 +32,5 @@ def example_function():
     #         criar_slide_com_grafico("Comparação Pré vs Pós-teste", dados_estudo, "bar")
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

@@ -1,4 +1,7 @@
 # Auto-correção aplicada
+import numpy as np
+import pandas as pd
+
 def example_function():
     """Código do exemplo"""
     pass
@@ -42,5 +45,5 @@ def example_function():
     # model = RandomForestClassifier(random_state=42)
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

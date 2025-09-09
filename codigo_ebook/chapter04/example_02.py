@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 52
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+from scipy import stats
+
 
 def testar_normalidade(dados, grupo_col, variavel_dependente):
     """Testa normalidade dos dados"""

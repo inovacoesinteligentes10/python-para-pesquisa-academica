@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 213
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Visualizando a decomposição
 fig, axes = plt.subplots(4, 1, figsize=(15, 12))

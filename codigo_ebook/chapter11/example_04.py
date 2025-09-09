@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 134
 
 Este código foi extraído automaticamente do arquivo chapter11.tex
 """
+import numpy as np
+
 
 def realizar_testes_estatisticos(self):
         """Realiza testes estatísticos principais"""

@@ -19,7 +19,7 @@ install-dev: ## Instalar dependências de desenvolvimento
 
 test: ## Testar sintaxe de todos os exemplos
 	@echo "🔍 Testando sintaxe de todos os exemplos..."
-	python test_examples.py
+	uv run python test_examples.py
 
 fix: ## Aplicar correções automáticas aos exemplos
 	@echo "🔧 Aplicando correções automáticas..."
@@ -41,7 +41,7 @@ ifndef EXAMPLE
 	@echo "❌ Especifique o exemplo: make run-example EXAMPLE=chapter03/example_01.py"
 else
 	@echo "🚀 Executando $(EXAMPLE)..."
-	python codigo_ebook/$(EXAMPLE)
+	uv run python codigo_ebook/$(EXAMPLE)
 endif
 
 run-chapter: ## Executar todos exemplos de um capítulo (uso: make run-chapter CHAPTER=03)
@@ -51,7 +51,7 @@ else
 	@echo "🚀 Executando todos exemplos do capítulo $(CHAPTER)..."
 	@for file in codigo_ebook/chapter$(CHAPTER)/*.py; do \
 		echo "📄 Executando $$file"; \
-		python "$$file" || echo "❌ Erro em $$file"; \
+		uv run python "$$file" || echo "❌ Erro em $$file"; \
 	done
 endif
 

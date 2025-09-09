@@ -6,6 +6,11 @@ Linha original no arquivo LaTeX: 36
 
 Este código foi extraído automaticamente do arquivo chapter11.tex
 """
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 # Configuração de estilo para gráficos
 plt.style.use('seaborn-v0_8-whitegrid')

@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 367
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import pandas as pd
+
 
 # 4. Criar variáveis derivadas
 dados_limpos['faixa_etaria'] = pd.cut(dados_limpos['idade'],

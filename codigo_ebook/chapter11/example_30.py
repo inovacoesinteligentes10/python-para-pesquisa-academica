@@ -1,4 +1,7 @@
 # Auto-correção aplicada
+import numpy as np
+import matplotlib.pyplot as plt
+
 def example_function():
     """Código do exemplo"""
     pass
@@ -34,7 +37,8 @@ def example_function():
     #                 plt.savefig(filename, dpi=300, bbox_inches='tight',
     #                             facecolor='white', edgecolor='none')
     #                 print(f"Gráfico salvo como: {filename}")
-    #             plt.show()
+    #             plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa
     #         result = fig, ax
     #         criar_grafico_publicacao(
     #             dados_estudo,
@@ -45,5 +49,5 @@ def example_function():
     #         )
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

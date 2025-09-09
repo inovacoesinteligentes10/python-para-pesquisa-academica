@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 772
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 print("\nEXEMPLO 3: DIFERENCA ENTRE MEDIAS")
 print("=" * 30)
@@ -40,4 +43,5 @@ plt.ylabel('Densidade')
 plt.title('Bootstrap: Diferenca entre Grupos')
 plt.legend()
 plt.grid(True, alpha=0.3)
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

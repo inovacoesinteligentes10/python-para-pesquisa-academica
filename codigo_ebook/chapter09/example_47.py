@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 933
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+
 
 # Relatório de análise de sazonalidade
 print("=" * 60)

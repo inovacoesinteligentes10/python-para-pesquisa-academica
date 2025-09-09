@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 817
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+
 
 def teste_permutacao(grupo1, grupo2, estatistica_func=None, n_perm=10000):
     """

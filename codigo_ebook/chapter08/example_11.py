@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 654
 
 Este código foi extraído automaticamente do arquivo chapter8.tex
 """
+import numpy as np
+import pandas as pd
+
 
 def feature_importance_regression(self, model,
                                     feature_names: List[str]) -> pd.DataFrame:

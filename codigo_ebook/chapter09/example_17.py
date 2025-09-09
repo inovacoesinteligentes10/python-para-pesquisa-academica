@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 301
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Visualizando os pontos de mudança
 plt.figure(figsize=(15, 6))
@@ -24,4 +26,5 @@ plt.legend()
 plt.grid(True, alpha=0.3)
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

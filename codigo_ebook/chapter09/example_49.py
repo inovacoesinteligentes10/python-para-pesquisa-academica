@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 986
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import pandas as pd
+
 
 # Previsão estendida com análise de incerteza sazonal
 horizonte_previsao = 12  # 12 meses à frente

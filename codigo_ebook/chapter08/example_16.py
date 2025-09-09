@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 912
 
 Este código foi extraído automaticamente do arquivo chapter8.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # Exemplo de uso
 unsupervised_toolkit = UnsupervisedToolkit()

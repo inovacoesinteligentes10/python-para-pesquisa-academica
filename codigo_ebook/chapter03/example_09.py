@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 266
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 # Calcular tamanho do efeito simples
 def cohen_d(grupo1, grupo2):

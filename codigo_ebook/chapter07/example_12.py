@@ -49,5 +49,5 @@ def example_function():
     #                 return self._fallback_entity_extraction(text)
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

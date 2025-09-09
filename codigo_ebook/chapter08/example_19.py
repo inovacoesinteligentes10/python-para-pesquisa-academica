@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 1043
 
 Este código foi extraído automaticamente do arquivo chapter8.tex
 """
+import matplotlib.pyplot as plt
+
 
 def plot_learning_curves(self, learning_results: Dict,
                             title: str = "Curvas de Aprendizado"):
@@ -33,4 +35,5 @@ def plot_learning_curves(self, learning_results: Dict,
         plt.title(title)
         plt.legend(loc='best')
         plt.grid(True, alpha=0.3)
-        plt.show()
+        plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

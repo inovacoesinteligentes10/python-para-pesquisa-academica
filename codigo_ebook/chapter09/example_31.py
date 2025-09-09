@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 583
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Análise sazonal detalhada
 from statsmodels.tsa.seasonal import STL
@@ -19,4 +21,5 @@ fig = resultado_stl.plot()
 fig.suptitle('Decomposição STL - Publicações Científicas',
              fontsize=14, fontweight='bold')
 plt.tight_layout()
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

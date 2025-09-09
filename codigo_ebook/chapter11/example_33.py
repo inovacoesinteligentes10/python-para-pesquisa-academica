@@ -6,6 +6,10 @@ Linha original no arquivo LaTeX: 1183
 
 Este código foi extraído automaticamente do arquivo chapter11.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+
 
 # Figura composta para publicação
 def criar_figura_multipla(dados, filename=None):

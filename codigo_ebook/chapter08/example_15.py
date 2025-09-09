@@ -1,4 +1,8 @@
 # Auto-correção aplicada
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
 def example_function():
     """Código do exemplo"""
     pass
@@ -29,7 +33,8 @@ def example_function():
     #             axes[i].set_ylabel('PC2')
     #             plt.colorbar(scatter, ax=axes[i])
     #         plt.tight_layout()
-    #         plt.show()
+    #         plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa
     #     def analyze_cluster_characteristics(self, X: pd.DataFrame,
     #                                         cluster_labels: np.ndarray) -> pd.DataFrame:
     #         """Analisa características de cada cluster"""
@@ -41,5 +46,5 @@ def example_function():
     #             return cluster_stats
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

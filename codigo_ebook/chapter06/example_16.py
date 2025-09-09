@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 662
 
 Este código foi extraído automaticamente do arquivo chapter6.tex
 """
+import pandas as pd
+
 
 def generate_privacy_report(self, processed_data: pd.DataFrame) -> Dict:
         """Gera relatório de privacidade"""

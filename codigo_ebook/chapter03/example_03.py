@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 86
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 # Simular dados de EEG: 64 eletrodos, 1000 pontos temporais, 100 trials
 n_eletrodos = 64

@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 801
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+
 
 # Análise de ciclos específicos da área acadêmica
 from scipy.fft import fft, fftfreq

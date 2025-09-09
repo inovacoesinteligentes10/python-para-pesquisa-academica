@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 1144
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # Criar variaveis observadas com ruido
 dados_psico = pd.DataFrame({

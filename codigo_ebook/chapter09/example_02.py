@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 32
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # Criando dados simulados de temperatura para pesquisa climática
 np.random.seed(42)

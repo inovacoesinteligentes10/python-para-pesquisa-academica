@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 720
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 def pipeline_testes_estatisticos(dados_limpos):
     # Teste t

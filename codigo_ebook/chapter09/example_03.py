@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 47
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import pandas as pd
+
 
 # Criando DataFrame
 df_clima = pd.DataFrame({

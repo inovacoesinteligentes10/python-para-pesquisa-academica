@@ -18,5 +18,5 @@ def example_function():
     #         arquivo_pdf = gerar_relatorio_pdf(dados_estudo, "Relatório de Eficácia Educacional")
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

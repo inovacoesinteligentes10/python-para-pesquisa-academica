@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 654
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # Simulação de pipeline completo de pesquisa
 def pipeline_completo_pesquisa():

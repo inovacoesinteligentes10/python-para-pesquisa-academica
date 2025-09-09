@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 113
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 # Calcular potencial evocado (media atraves de trials)
 potencial_evocado = np.mean(dados_eeg, axis=2)

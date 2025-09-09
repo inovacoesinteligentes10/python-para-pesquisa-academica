@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 880
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+import pandas as pd
+
 
 import time
 

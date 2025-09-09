@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 131
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 # Dados de um experimento: tempo de reacao e acuracia
 n_participantes = 1000

@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 406
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import pandas as pd
+
 
 def anova_efeito_posthoc(dados, grupo_col, variavel_dep, grupos_dados, p_anova):
    """Calcula tamanho de efeito e testes post-hoc"""

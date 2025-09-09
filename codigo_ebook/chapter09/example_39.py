@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 755
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Visualizando comparação entre modelos
 plt.figure(figsize=(15, 8))

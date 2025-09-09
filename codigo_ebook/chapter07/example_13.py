@@ -29,7 +29,7 @@ def example_function():
     # sample_text = """
     # João Silva trabalhou na Empresa ABC de São Paulo.
     # Seu email é joao@empresa.com e telefone (11) 98765-4321.
-    # A empresa investiu R$ "1.500.000",00 em tecnologia.
+    # A empresa investiu R$ ""1.500.000"",00 em tecnologia.
     # """
     # basic_entities = extractor.extract_entities(sample_text)
     # named_entities = extractor.extract_named_entities_spacy(sample_text)
@@ -39,5 +39,5 @@ def example_function():
     #         print(f"{entity_type}: {entities}")
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

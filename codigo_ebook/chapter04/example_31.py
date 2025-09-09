@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 1183
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+from scipy import stats
+
 
 from statsmodels.stats.multitest import multipletests
 

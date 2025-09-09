@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 265
 
 Este código foi extraído automaticamente do arquivo chapter7.tex
 """
+import numpy as np
+
 
 def lexicon_based_sentiment(self, text: str) -> Dict[str, Union[float, str]]:
         """Análise de sentimento baseada em léxico"""

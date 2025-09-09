@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 1002
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import pandas as pd
+
 
 # Análise de incerteza por período sazonal
 incerteza_sazonal = []

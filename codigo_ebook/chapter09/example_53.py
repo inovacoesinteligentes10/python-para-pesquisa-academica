@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 1067
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Gráfico de incerteza por mês
 meses_nomes = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun',
@@ -29,4 +31,5 @@ axes[1].legend()
 axes[1].grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

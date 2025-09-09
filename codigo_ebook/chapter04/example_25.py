@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 957
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+
 
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler

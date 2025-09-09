@@ -30,13 +30,13 @@ def example_function():
     # +-- docs/             # Documentação
     # ```
     # - Python >= 3.8
-    # - pandas >= "1.3.0"
-    # - numpy >= "1.21.0"
-    # - matplotlib >= "3.4.0"
-    # - seaborn >= "0.11.0"
-    # - scipy >= "1.7.0"
+    # - pandas >= ""1.3.0""
+    # - numpy >= ""1.21.0""
+    # - matplotlib >= ""3.4.0""
+    # - seaborn >= ""0.11.0""
+    # - scipy >= ""1.7.0""
     # - [Nome do Pesquisador]
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

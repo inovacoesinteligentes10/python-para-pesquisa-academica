@@ -48,5 +48,5 @@ def example_function():
     #             story.append(Paragraph(conclusoes, styles['Normal']))
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

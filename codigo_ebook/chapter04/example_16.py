@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 625
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import pandas as pd
+
 
 dados_reg = pd.DataFrame({
     'idade': np.random.randint(20, 60, n),

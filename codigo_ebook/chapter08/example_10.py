@@ -1,4 +1,6 @@
 # Auto-correção aplicada
+import matplotlib.pyplot as plt
+
 def example_function():
     """Código do exemplo"""
     pass
@@ -38,12 +40,13 @@ def example_function():
     #         stats.probplot(residuals, dist="norm", plot=axes[1,1])
     #         axes[1,1].set_title('Q-Q Plot dos Resíduos')
     #         plt.tight_layout()
-    #         plt.show()
+    #         plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa
     #         print(f"Estatísticas dos Resíduos:")
     #         print(f"Média: {residuals.mean():.4f}")
     #         print(f"Desvio Padrão: {residuals.std():.4f}")
     #         print(f"Teste de Normalidade (Shapiro-Wilk): {stats.shapiro(residuals)[1]:.4f}")
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

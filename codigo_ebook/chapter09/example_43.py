@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 843
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Visualizando análise espectral
 fig, axes = plt.subplots(2, 2, figsize=(15, 10))

@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 499
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 # 4. Scatter plot com linha de tendência
 np.random.seed(42)
@@ -30,4 +33,5 @@ ax4.set_title('Relação Idade vs Performance')
 
 plt.tight_layout()
 plt.savefig('analise_completa.png', dpi=300, bbox_inches='tight')
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

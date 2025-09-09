@@ -18,5 +18,5 @@ def example_function():
     #         result = dict(sorted(key_themes.items(), key=lambda x: x[1], reverse=True))
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

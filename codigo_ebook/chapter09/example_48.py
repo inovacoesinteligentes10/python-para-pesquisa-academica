@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 960
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+from scipy import stats
+
 
 # Teste de sazonalidade mais rigoroso
 from statsmodels.stats.diagnostic import acorr_ljungbox

@@ -43,7 +43,8 @@ ax2.set_title('Comparação entre Grupos')
 
 plt.tight_layout()
 plt.savefig('results_analysis.png', dpi=300, bbox_inches='tight')
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa
 
 # Resultados
 print(f"Estatística t: {t_stat:.3f}")

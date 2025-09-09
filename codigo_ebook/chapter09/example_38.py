@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 737
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import numpy as np
+
 
 # Métricas de avaliação SARIMA
 mae_sarima = mean_absolute_error(teste, previsoes_sarima)

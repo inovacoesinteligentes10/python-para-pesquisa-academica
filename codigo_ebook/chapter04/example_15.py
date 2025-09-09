@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 574
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+
 
 def regressao_robusta_interpretacao(modelo, X, y, preditores, p_norm, bp_p, white_p, dw_stat, outliers_residuos):
     """Executa regressao robusta e interpretacao final"""

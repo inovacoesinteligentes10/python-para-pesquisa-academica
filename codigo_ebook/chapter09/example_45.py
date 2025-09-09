@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 893
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Análise de concentração de publicações por período do ano
 trimestre_concentracao = df_academico.groupby(['ano', 'trimestre'])['publicacoes'].sum().unstack()

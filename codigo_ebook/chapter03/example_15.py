@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 464
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 # 2. Boxplot
 dados_boxplot = [

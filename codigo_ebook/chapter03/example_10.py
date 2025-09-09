@@ -6,6 +6,9 @@ Linha original no arquivo LaTeX: 305
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+import pandas as pd
+
 
 # Simular dados com problemas comuns
 np.random.seed(42)

@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 777
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Intervalo de confiança SARIMA
 plt.fill_between(teste.index, ic_sarima.iloc[:, 0], ic_sarima.iloc[:, 1],
@@ -19,4 +21,5 @@ plt.legend()
 plt.grid(True, alpha=0.3)
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

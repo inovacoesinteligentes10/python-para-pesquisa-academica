@@ -6,6 +6,10 @@ Linha original no arquivo LaTeX: 1102
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 def pca_biplot_heatmap(dados, dados_pca, loadings_df, pca, n_componentes, axes):
     """Cria biplot e heatmap"""
@@ -33,7 +37,8 @@ def pca_biplot_heatmap(dados, dados_pca, loadings_df, pca, n_componentes, axes):
     axes[1,1].set_title('Heatmap dos Loadings')
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa
 
 # Dados de exemplo: simulando questionario psicologico
 np.random.seed(42)

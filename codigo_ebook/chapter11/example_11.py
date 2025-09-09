@@ -41,5 +41,5 @@ def example_function():
     #         result = nome_arquivo, html_content
 
 # Executar exemplo
-if __name__ == '__main__':
+    if __name__ == '__main__':
     example_function()

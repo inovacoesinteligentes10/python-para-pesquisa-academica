@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 561
 
 Este código foi extraído automaticamente do arquivo chapter9.tex
 """
+import matplotlib.pyplot as plt
+
 
 # Q-Q plot
 from scipy import stats
@@ -17,4 +19,5 @@ plot_acf(residuos.dropna(), ax=axes[1, 1], lags=20)
 axes[1, 1].set_title('ACF dos Resíduos')
 
 plt.tight_layout()
-plt.show()
+plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa

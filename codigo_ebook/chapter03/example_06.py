@@ -6,6 +6,8 @@ Linha original no arquivo LaTeX: 160
 
 Este código foi extraído automaticamente do arquivo chapter3.tex
 """
+import numpy as np
+
 
 # Aalise por grupo usando máscaras
 mascara_controle = grupos_validos == 'controle'

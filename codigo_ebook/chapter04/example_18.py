@@ -6,6 +6,10 @@ Linha original no arquivo LaTeX: 697
 
 Este código foi extraído automaticamente do arquivo chapter4.tex
 """
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+
 
 def bootstrap_intervalos_viz(stat_original, bootstrap_stats, alpha=0.05):
     """Calcula intervalos de confianca e cria visualizacoes"""
@@ -44,6 +48,7 @@ def bootstrap_intervalos_viz(stat_original, bootstrap_stats, alpha=0.05):
     plt.grid(True, alpha=0.3)
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig("temp_plot.png", bbox_inches="tight")
+plt.close()  # plt.show() substituído para execução não-interativa
 
     return bias, erro_padrao, ci_lower, ci_upper
